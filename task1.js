@@ -26,6 +26,19 @@ class model1{
         }
         (this.ans_array)[ input ] = temp_array.length + (this.ans_array)[output];
     }
+
+    get_array_sum( input ){
+        var output = input;
+        var array = new Array();
+        var sum = output;
+        array.push(output);
+        while( output != 1  ){
+            output = this.func1( output );
+            array.push(output);
+            sum += output;
+        }
+        return sum;
+    }
 }
 
 var obj=new model1;
@@ -46,5 +59,5 @@ for ( var i = 2; i <= 10000000; i++ ){
     }
 }
 
-console.log( "1st : " + max_1st_num + ", len : " + max_1st_len );
-console.log( "2nd : " + max_2nd_num + ", len : " + max_2nd_len );
+console.log( "1st : " + max_1st_num + ", len : " + max_1st_len + ", sum : " + obj.get_array_sum(max_1st_num) );
+console.log( "2nd : " + max_2nd_num + ", len : " + max_2nd_len + ", sum : " + obj.get_array_sum(max_2nd_num) );
