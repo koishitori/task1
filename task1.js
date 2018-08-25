@@ -17,6 +17,7 @@ class model1{
     }
 
 // Create nums array that be created from the above rules.
+// If a known number is found, skip the work and add the value for the known number
     get_array_length( input ){
         var output = input;
         var temp_array = new Array();
@@ -27,6 +28,7 @@ class model1{
         (this.ans_array)[ input ] = temp_array.length + (this.ans_array)[output];
     }
 
+//Calculate sum of the array
     get_array_sum( input ){
         var output = input;
         var array = new Array();
