@@ -28,15 +28,12 @@ class model1{
         (this.ans_array)[ input ] = temp_array.length + (this.ans_array)[output];
     }
 
-//Calculate sum of the array
+// Compute the sum of the array obtained from the input value
     get_array_sum( input ){
         var output = input;
-        var array = new Array();
         var sum = output;
-        array.push(output);
         while( output != 1  ){
             output = this.func1( output );
-            array.push(output);
             sum += output;
         }
         return sum;
